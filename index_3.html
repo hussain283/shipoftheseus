@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ship of Theseus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'M PLUS 1', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+    }
+
+    .page {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 80px 32px 120px;
+    }
+
+    .logo {
+      margin-bottom: 52px;
+    }
+
+    .logo svg {
+      width: 360px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      line-height: 1.2;
+      margin-bottom: 56px;
+    }
+
+    hr {
+      border: none;
+      border-top: 0.5px solid rgba(26,26,26,0.2);
+      margin-bottom: 40px;
+    }
+
+    .body-block {
+      margin-bottom: 56px;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      color: #555550;
+      line-height: 1.9;
+      max-width: 480px;
+      margin-bottom: 24px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      font-weight: 300;
+      color: #999990;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 300;
+      color: #1a1a1a;
+      text-decoration: none;
+      border-bottom: 0.5px solid rgba(26,26,26,0.25);
+    }
+
+    a:hover {
+      border-bottom-color: #1a1a1a;
+    }
+
+    @media (max-width: 480px) {
+      .page { padding: 48px 24px 80px; }
+      h1 { font-size: 18px; letter-spacing: 0.16em; }
+      .logo svg { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 245" role="img" aria-label="Ship of Theseus logo">
+        <title>Ship of Theseus</title>
+        <style>
+          .sl { stroke: #1a1a1a; stroke-width: 1; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+          .sf { fill: #1a1a1a; stroke: none; }
+          .w  { stroke: #1a1a1a; stroke-width: 0.8; fill: none; stroke-linecap: round; }
+          .hull-solid { fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 1.5; stroke-linejoin: round; }
+        </style>
+
+        <!-- Masts -->
+        <line class="sl" x1="160" y1="10" x2="160" y2="122" stroke-width="1.2"/>
+        <line class="sl" x1="88"  y1="26" x2="88"  y2="122" stroke-width="1.1"/>
+        <line class="sl" x1="232" y1="30" x2="232" y2="122" stroke-width="1.1"/>
+
+        <!-- Yard arm -->
+        <line class="sl" x1="80" y1="54" x2="240" y2="48"/>
+
+        <!-- Centre sails -->
+        <polygon class="sf" points="160,12 118,88 160,80"/>
+        <polygon class="sf" points="160,12 202,91 160,82" opacity="0.8"/>
+        <polygon class="sf" points="160,81 118,106 202,106" opacity="0.65"/>
+
+        <!-- Fore sails -->
+        <polygon class="sf" points="88,28 48,84 88,77"/>
+        <polygon class="sf" points="88,28 126,86 88,78" opacity="0.75"/>
+
+        <!-- Aft sails -->
+        <polygon class="sf" points="232,32 194,84 232,77"/>
+        <polygon class="sf" points="232,32 270,86 232,78" opacity="0.75"/>
+
+        <!-- Deck line -->
+        <line class="sl" x1="72" y1="122" x2="248" y2="122" stroke-width="1.6"/>
+
+        <!-- Hull top half — outline only -->
+        <path class="sl" stroke-width="1.5" stroke-linejoin="round"
+              d="M 52,134 L 72,122 L 248,122 L 268,134 L 262,152"/>
+        <path class="sl" stroke-width="1.5" stroke-linejoin="round"
+              d="M 52,134 L 58,152"/>
+
+        <!-- Hull bottom half — solid -->
+        <path class="hull-solid"
+              d="M 58,152 L 262,152 L 252,170 L 160,180 L 68,170 Z"/>
+
+        <!-- Three water lines -->
+        <path class="w" d="M 8,196 Q 42,188 76,196 Q 110,204 144,196 Q 178,188 212,196 Q 246,204 280,196 Q 300,191 312,193"/>
+        <path class="w" d="M 0,210 Q 36,202 72,210 Q 108,218 144,210 Q 180,202 216,210 Q 252,218 288,210 Q 304,206 316,208"/>
+        <path class="w" d="M 4,224 Q 44,215 84,224 Q 124,233 164,224 Q 204,215 244,224 Q 276,231 312,224"/>
+      </svg>
+    </div>
+
+    <h1>Ship of Theseus</h1>
+
+    <hr/>
+    <div class="body-block">
+      <p>Ship of Theseus is a private investment vehicle focused on public and private markets. We seek out businesses that endure — companies that grow, evolve, and adapt without losing themselves.</p>
+    </div>
+
+    <hr/>
+    <div class="body-block">
+      <p>If you have something worth sharing — send us a note.</p>
+    </div>
+
+    <hr/>
+    <p class="contact-label">Contact</p>
+    <a href="mailto:hussain@shipoftheseus.in">hussain@shipoftheseus.in</a>
+
+  </main>
+</body>
+</html>
